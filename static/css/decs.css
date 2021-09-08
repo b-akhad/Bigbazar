@@ -1,0 +1,169 @@
+#body{
+    background-image: linear-gradient( 45deg, royalblue, #f60bf6, #f17c58, #27DBB1, #FFDC18, #FF3706);
+    height: 100%;
+    background-size: 600%, 100%;
+    background-attachment: fixed;
+    animation: gradient 16s linear infinite;
+    animation-direction: alternate;
+    margin: 0;
+}
+#fluid{
+    height:80px;
+}
+@keyframes gradient {
+    0% {background-position: 0}
+    100% {background-position: 100%}
+}
+.flex-parent{
+    display: flex;
+    color: white;
+}
+
+#insta{
+    width: 25px ;
+    height: 25px;
+
+}
+
+#search-box{
+    width: 650px;
+
+}
+
+
+.container{
+    width: 1600px;
+}
+a{
+    text-decoration: green;
+    color: black;
+
+}
+
+.d-flex{
+    width: 40%;
+}
+
+.logo{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+}
+.logo_name{
+    font-size: 34px;
+}
+#logo{
+    display: flex;
+}
+#navbar{
+    box-shadow: 10px 10px 20px rgba(239, 32, 203, 0.2)
+}
+
+.card{
+    width: 23.5%;
+    margin: 0 0.7%;
+
+
+}
+
+
+.a-btn{
+    display: none;
+    bottom: 8px;
+    left: 7px;
+}
+.card:hover{
+
+    box-shadow: 10px 10px 20px rgba(239, 32, 203, 0.2)
+}
+.img_height{
+    height: 290px;
+}
+.card:hover .a-btn{
+    display: inline-block;
+}
+.w-100{
+    height: 1px;
+    background-color: lavender;
+}
+.pagin{
+    text-align: center;
+    margin-top: 1.5em;
+}
+.pagin-action{
+    margin: 0 0.1em;
+    display: inline-block;
+    padding: 0.5em;
+    color: #B9B9B9;
+    font-size: 1.3em;
+
+}
+.pagin-action:hover{
+    color: #3354aa;
+}
+.pagin-num{
+    background-color: #6d85c7;
+    padding: 0.5em 0.8em;
+    color: #ffffff;
+    border-radius: 2px;
+}
+.pagin-num:hover, .pagin-cur{
+    background-color: #3354aa;
+}
+
+@media (min-width: 200px) and (max-width: 475px){
+    .card{
+        width: 94%;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    #menu{
+        margin-left: 5px !important;
+    }
+
+    .img_height{
+        height: 310px;
+
+    }
+    .d-flex{
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    .a-btn{
+        display: inline-block !important;
+    }
+
+}
+@media (min-width: 476px) and (max-width: 776px){
+    .card{
+        width: 90%;
+        margin-left: 4%;
+    }
+    #menu{
+        margin-left: 5px !important;
+    }
+    .a-btn{
+        display: inline-block !important;
+    }
+
+
+
+}
+@media (min-width: 776.1px) and (max-width: 1200px){
+    .card{
+        width: 48%;
+    }
+    #menu{
+        margin-left: 5px !important;
+    }
+
+}
+
+@media (min-width: 1200px){
+    .img_height{
+        height: 320px;
+    }
+
+}
