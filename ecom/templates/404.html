@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BigBazar</title>
+    <link rel="stylesheet" href="{% static 'bootcss/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/decs.css' %}">
+</head>
+<body id="body">
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+
+      <a href="https://www.instagram.com/ladies.shop.uz/?hl=en" class="flex-parent text-dark ">
+        <div class=""><img id="insta" class="" src="{% static 'images/instagram.png' %}" alt="image"></div>
+        <div class="ml-2 text-white">ladyhouse</div>
+    </a>
+    <div class="flex-parent ml-3">
+        <div class=""><img id="insta" class="" src="{% static 'images/send.png' %}" alt="image"></div>
+        <div class="ml-2 text-white">ladyhouse</div>
+    </div>
+      <form class="d-flex input-group w-auto">
+      <input
+        type="search"
+        class="form-control rounded"
+        placeholder="Brand bo'yicha qidiring..."
+        aria-label="Search"
+        aria-describedby="search-addon"
+      />
+
+    </form>
+      <div class="flex-parent ml-3">
+        <div class=""><img id="insta" class="" src="{% static 'images/telephone-call.png' %}" alt="image"></div>
+        <div class="ml-2 text-white">+890 9995101</div>
+      </div>
+
+
+  </div>
+</nav>
+<div class="container">
+<h2 class="display-3 ">Bu sahifa mavjud emas</h2>
+
+    <div class="row">
+        <div class="col-md-6 offset-3">
+            <a href="{% url 'home' %}" class="text-center btn btn-primary ml-5">Qaytish</a>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

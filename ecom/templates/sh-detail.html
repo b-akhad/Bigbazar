@@ -1,0 +1,136 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BigBazar</title>
+    <link rel="stylesheet" href="{% static 'css/decs.css' %}">
+    <link rel="stylesheet" href="{% static 'bootcss/bootstrap.css' %}">
+</head>
+<body id="body">
+
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+
+      <a href="https://www.instagram.com/ladies.shop.uz/?hl=en" class="flex-parent text-dark ">
+        <div class=""><img id="insta" class="" src="{% static 'images/instagram.png' %}" alt="image"></div>
+        <div class="ml-2 text-white">info-BigBazar</div>
+    </a>
+    <a href="https://t.me/Mansuroffakhad" class="flex-parent text-dark">
+        <div class=""><img id="insta" class="" src="{% static 'images/send.png' %}" alt="image"></div>
+        <div class="ml-2 text-white">info-BigBazar</div>
+      </a>
+      <form class="d-flex input-group w-auto">
+      <input
+        type="search"
+        class="form-control rounded"
+        placeholder="Brand bo'yicha qidiring..."
+        aria-label="Search"
+        aria-describedby="search-addon"
+      />
+
+    </form>
+      <div class="flex-parent ml-3">
+        <div class=""><img id="insta" class="" src="{% static 'images/telephone-call.png' %}" alt="image"></div>
+        <div class="ml-2 text-white">+890 9995101</div>
+      </div>
+
+
+  </div>
+</nav>
+
+<div class="container">
+    <div id="navbar" style="border-radius: 30px" class="navbar navbar-expand-lg navbar-light bg-light mt-3">
+        <a href="{% url 'home' %}" id="logo" class="navbar-brand">
+
+            <div><img class="logo" src="{% static 'images/mylogo.jpg' %}" alt=""></div>
+            <div class="logo_name mt-2 ml-3">BigBazar</div>
+
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse ml-5" id="menu">
+            <ul class="navbar-nav justify-content-end">
+                <li class="nav-item"><a href="{% url 'dress' %}" class="nav-link">Ko'ylak</a></li>
+                <li class="nav-item"><a href="{% url 'shoe' %}" style="color: rgba(239, 32, 203, 0.9)" class="nav-link">Obuv</a></li>
+                <li class="nav-item"><a href="{% url 'bag' %}" class="nav-link">Sumka</a></li>
+                <li class="nav-item"><a href="{% url 'treasure' %}" class="nav-link">Shim-yubka</a></li>
+                <li class="nav-item"><a href="{% url 'hijab' %}" class="nav-link">Hijab</a></li>
+                <li class="nav-item"><a href="{% url 'romol' %}" class="nav-link">Ro'mol</a></li>
+
+
+            </ul>
+        </div>
+
+    </div>
+    <div class="row   align-content-md-start mt-3">
+            <div class="card mb-2 mt-2" >
+                <img class="card-img-top" src="{{ shoe.image.url }}" alt="Card image cap">
+                <div class="card-body">
+                    <h6 class="text-center"><span class="badge badge-primary">{{ shoe.category }}</span></h6>
+                    <div class="flex-parent justify-content-between">
+                <p style="font-size: 15px" class="text-black-50 flex-parent mt-1">
+                    Brand <strong style="font-size: 16px" class="text-dark ml-1">{{shoe.brand}}</strong>
+                </p>
+                <p style="font-size: 15px" class="text-black-50 flex-parent mt-1">
+                    Model <b style="font-size: 16px" class="text-dark ml-1">{{shoe.model}}</b>
+                </p>
+                </div>
+                <div class="flex-parent justify-content-between">
+                <p style="font-size: 15px" class="text-black-50 flex-parent ">
+                    Razmer <strong style="font-size: 16px" class="text-dark ml-1">{{shoe.razmer}}</strong>
+                </p>
+                <p style="font-size: 15px" class="text-black-50 flex-parent ">
+                    Narxi <b style="font-size: 16px" class="text-dark ml-1">{{shoe.price}}</b>
+                </p>
+                </div>
+
+
+                </div>
+            </div>
+        <div class="col-md-4 offset-1 mr-2 bg-light mt-3">
+        <form  action="" method="post">
+        {% csrf_token %}
+        <label  for="name">Ism</label>
+        <input required class="input-group" id="name" name="ism" placeholder="To'liq Ismingiz" type="text">
+
+        <label class="mb-1 mt-2"  for="tel">tel</label>
+        <input class="input-group" required  id="tel" name="telefon" type="text" placeholder="+998 ">
+        <button class="btn btn-outline-success mt-3 mb-2"  type="submit">Kiritish</button>
+
+            {% if messages %}
+                {%for result in messages%}
+                     <div class="alert alert-info p-1">
+                        <strong style="font-size: 16px">{{result}}</strong>
+                     </div>
+                {%endfor%}
+            {% endif%}
+    </form>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
