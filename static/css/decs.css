@@ -112,6 +112,37 @@ a{
     background-color: #3354aa;
 }
 
+@media(min-width: 200px) and (max-width: 415px){
+    .card{
+        width: 94%;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .logo_name{
+        font-size: 13px;
+    }
+
+    #menu{
+        margin-left: 5px !important;
+    }
+
+    .img_height{
+        height: 310px;
+
+    }
+    .d-flex{
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    .a-btn{
+        display: inline-block !important;
+    }
+
+
+}
+
 @media (min-width: 200px) and (max-width: 475px){
     .card{
         width: 94%;
